@@ -17,4 +17,11 @@ describe('Controller: MainCtrl', function () {
     });
   }));
 
+  it('expect json schema as object', function() {
+    expect(typeof scope.schema).toBe('object');
+  });
+
+  it('expect empty form', function () {
+    expect(scope.form).toEqual(['*']);
+  });
 });

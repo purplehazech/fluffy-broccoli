@@ -1,2 +1,9 @@
 <div class="row">
+  <h1>{{schema.title}}</h1>
+  <form name="mainForm"
+      sf-schema="schema"
+      sf-form="form"
+      sf-model="model"
+      sf-options="{ formDefaults: { onChange: 'onChange(model)' }, validateOnRender: true }"></form>
+  <p> Sum of all numbers in kids: {{ results.totalNumbers }} </p>
 </div>
