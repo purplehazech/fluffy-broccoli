@@ -33,13 +33,13 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/">Thing Calculator</a>
+            <span class="navbar-brand glyphicon glyphicon-fire"></span>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
+              <li><a ui-sref-active="active" ng-href="#/">Home</a></li>
               <li><a ng-href="#/about">About</a></li>
             </ul>
           </div>
@@ -82,6 +82,7 @@
     <script src="bower_components/objectpath/lib/ObjectPath.js"></script>
     <script src="bower_components/angular-schema-form/dist/schema-form.js"></script>
     <script src="bower_components/angular-schema-form/dist/bootstrap-decorator.js"></script>
+    <script src="bower_components/angular-clipboard/angular-clipboard.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -92,6 +93,7 @@
         <script src="scripts/services/calculation.js"></script>
         <script src="scripts/services/schema.js"></script>
         <script src="scripts/services/form.js"></script>
+        <script src="scripts/directives/templatedresults.js"></script>
         <!-- endbuild -->
 </body>
 </html>

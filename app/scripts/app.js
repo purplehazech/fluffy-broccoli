@@ -14,7 +14,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'schemaForm'
+    'schemaForm',
+    'angular-clipboard'
   ])
   .config(function ($routeProvider) {
     $routeProvider

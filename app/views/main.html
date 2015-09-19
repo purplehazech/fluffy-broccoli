@@ -5,9 +5,11 @@
       sf-form="form"
       sf-model="model"
       sf-options="{ formDefaults: { onChange: 'onChange(model)' }, validateOnRender: true }"></form>
-  <p>
-    <pre>
-Name of thing: {{ model.name }}
-Sum of all numbers in kids: {{ results.totalNumbers }} </pre>
-  </p>
+  <div>
+    <pre id="resultText" templated-results></pre>
+    <button class="btn btn-primary pull-right" clipboard text="resultText" style="margin: 13px">
+      <span class="glyphicon glyphicon-copy"></span>
+      Copy to clipboard
+    </button>
+  </div>
 </div>

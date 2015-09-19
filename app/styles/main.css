@@ -19,8 +19,15 @@ body {
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
 }
+.navbar-static-top {
+  background-color: purple;  
+  color: bluefire;
+}
+.navbar-inverse .navbar-brand {
+  color: white;
+}
+
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
   margin-top: 0;

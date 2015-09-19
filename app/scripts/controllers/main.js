@@ -16,4 +16,7 @@ angular.module('fluffyBroccoliApp')
     $scope.onChange = function(data) {
       calculation.calculate($scope, data);
     };
+    $scope.$watch(function() {
+      $scope.resultText = angular.element( document.querySelector( '#resultText' ) )[0].innerHTML;
+    });
   });
