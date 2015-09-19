@@ -15,6 +15,6 @@ describe('Directive: templatedResults', function () {
   it('should make hidden element visible', inject(function ($compile) {
     element = angular.element('<templated-results></templated-results>');
     element = $compile(element)(scope);
-    expect(element.text()).toBe('this is the templatedResults directive');
+    expect(element.text()).toBe('Name of thing: {{ model.name }}\nSum of all numbers in kids: {{ results.totalNumbers }}');
   }));
 });
