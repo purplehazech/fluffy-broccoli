@@ -13,6 +13,7 @@ angular.module('fluffyBroccoliApp')
     $scope.form = form;
     $scope.model = {};
 
+    // @todo update when https://github.com/Textalk/angular-schema-form/pull/374 is merged so this also fires when we remove a kid element
     $scope.onChange = function(data) {
       calculation.calculate($scope, data);
     };
