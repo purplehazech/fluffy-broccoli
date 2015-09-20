@@ -9,6 +9,7 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/angular-flash-alert/dist/angular-flash.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -51,6 +52,7 @@
     <div ng-view=""></div>
     </div>
 
+    <div flash-message="2000" class="app-message"></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -77,6 +79,7 @@
     <script src="bower_components/angular-schema-form/dist/schema-form.js"></script>
     <script src="bower_components/angular-schema-form/dist/bootstrap-decorator.js"></script>
     <script src="bower_components/angular-clipboard/angular-clipboard.js"></script>
+    <script src="bower_components/angular-flash-alert/dist/angular-flash.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

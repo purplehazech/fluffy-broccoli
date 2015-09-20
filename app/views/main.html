@@ -7,7 +7,12 @@
       sf-options="{ formDefaults: { onChange: 'onChange(model)' }, validateOnRender: true }"></form>
   <div>
     <pre id="resultText" templated-results></pre>
-    <button class="btn btn-primary pull-right" clipboard text="resultText" style="margin: 13px">
+    <button clipboard
+        on-copied="copySuccess()"
+        on-error="copyFail(err)"
+        class="btn btn-primary pull-right" 
+        text="resultText"
+        style="margin: 13px">
       <span class="glyphicon glyphicon-copy"></span>
       Copy to clipboard
     </button>
