@@ -21,7 +21,7 @@ describe('Controller: MainCtrl', function () {
     expect(typeof scope.schema).toBe('object');
   });
 
-  it('expect empty form', function () {
-    expect(scope.form).toEqual(['*']);
+  it('expect form array', function () {
+    expect(typeof scope.form).toBe('object');
   });
 });

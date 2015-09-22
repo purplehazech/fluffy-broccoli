@@ -12,9 +12,9 @@ describe('Directive: templatedResults', function () {
     scope = $rootScope.$new();
   }));
 
-  it('should make hidden element visible', inject(function ($compile) {
+  it('should contain a template', inject(function ($compile) {
     element = angular.element('<templated-results></templated-results>');
     element = $compile(element)(scope);
-    expect(element.text()).toBe('Name of thing: {{ model.name }}\nSum of all numbers in kids: {{ results.totalNumbers }}');
+    expect(typeof element.text()).toBe('string');
   }));
 });
