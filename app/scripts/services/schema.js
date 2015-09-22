@@ -37,7 +37,9 @@ angular.module('fluffyBroccoliApp')
         },
         "pvid": {
           "type": "integer",
-          "title": "PVID Interface"
+          "title": "PVID Interface",
+          "minimum": 1,
+          "maximum": 4095
         },
         "vlans": {
           "type": "array",
@@ -47,9 +49,14 @@ angular.module('fluffyBroccoliApp')
             "title": "VLAN",
             "properties": {
               "id": {
-                "type": "integer"
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 4095
               }
-            }
+            },
+            "required": [
+              "id"
+            ]
           }
         }
       },
