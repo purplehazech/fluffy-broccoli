@@ -3,8 +3,9 @@
 This project generates a form based on a JSON-Schema definition and then calls a service to act
 upon the contents of the form.
 
-This service then congains some calculation routing that result in some content with is then
-displayed to the user.
+This service then contains some calculation that results in some content which is then
+displayed to the user. The user then has the option to copy the results of the calculations
+to the clipboard.
 
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.12.1.
