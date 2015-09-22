@@ -14,38 +14,48 @@ angular.module('fluffyBroccoliApp')
     return {
       "$schema": "http://json-schema.org/draft-04/schema#",
       "type": "object",
-      "title": "Calculate Things",
+      "title": "Generate Switch Configuration",
       properties: {
-        "name": {
+        "identifier": {
           "type": "string",
-          "title": "Name Field",
-          "description": "Give your thing a name."
+          "title": "Identifier",
+          "description": "A unit/slot/port identifier (e.g. 1/0/1).",
         },
-        "kid": {
+        "description": {
+          "type": "string",
+          "title": "Description",
+        },
+        "acceptframe": {
+          "type": "string",
+          "enum": [
+            "admituntaggedonly",
+            "vlanonly",
+            "all"
+          ],
+          "title": "Acceptframe"
+        },
+        "pvid": {
+          "type": "boolean",
+          "title": "PVID Interface"
+        },
+        "vlans": {
           "type": "array",
-          "title": "Some Kids",
+          "title": "VLANs",
           "items": {
             "type": "object",
-            "title": "A Kid",
+            "title": "VLAN",
             "properties": {
-              "name": {
-                "type": "string",
-                "title": "Name of Kid",
-                "description": "Assign a name to each kid.",
-              },
-              "number": {
-                "type": "integer",
-                "title": "Number",
-                "desecription": "Choose a number between 1 and 10 for each kid",
-                "minimum": 1,
-                "maximum": 10,
+              "vlan": {
+                "type": "string"
               }
             }
           }
         }
       },
       "required": [
-        "name"
+        "identifier",
+        "description",
+        "acceptframe"
       ]
     };
   });

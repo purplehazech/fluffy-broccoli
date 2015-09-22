@@ -8,7 +8,26 @@
  */
 angular.module('fluffyBroccoliApp')
   .directive('templatedResults', function () {
-    var template = "Name of thing: {{ model.name }}\nSum of all numbers in kids: {{ results.totalNumbers }}";
+    var template =
+      "!Configuring interface {{ model.identifier }} ({{ model.description}})\n" +
+      "configure\n" +
+      "interface {{ model.identifier}}\n" +
+      "description {{ model.description}}\n" +
+      "auto-negotiate\n" +
+      "no lldp transmit\n" +
+      "no lldp receive\n" +
+      "no port lacpmode\n" +
+      "no spanning-tree port mode\n" +
+      "no vlan pvid\n" +
+      "vlan participation exclude 1\n" +
+      "vlan acceptframe {{ model.acceptframe }}\n" +
+      "vlan ingressfilter\n" +
+      //"{{ model.interface.pvid ? 'vlan pvid model.interface.pvid'}}\n" +
+      "\n" +
+      "no shutdown\n" +
+      "exit\n" +
+      "\n" +
+      "exit";
     return {
       template: template
     };
