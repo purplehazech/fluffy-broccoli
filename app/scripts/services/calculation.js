@@ -14,14 +14,28 @@ angular.module('fluffyBroccoliApp')
        * This service exposes a calculate method that does the heavy lifting
        */
       calculate: function($scope, data) {
+        var pvid = '';
+        if (data.pvid) {
+          pvid += 
+            "!Setting PVID " + data.pvid + " on interface " + data.identifier + "\n" +
+            "vlan pvid " + data.pvid + "\n" +
+            "\n";
+        }
 
-        // find a sum with the cheapest most dirty code thinkable of
-        var sum = 0;
-        angular.forEach(data.kid, function(kid) {
-          sum += kid.number;
+        var vlans = '';
+        angular.forEach(data.vlans, function(vlan) {
+          vlans += 
+            "!Adding VLAN " + vlan.id + " to interface " + data.identifier + "\n" +
+            "vlan participation include "+ vlan.id + "\n";
+          if (vlan.id !== data.pvid) {
+            vlans += "vlan tagging " + vlan.id + "\n";
+          }
+          vlans +=
+            "\n";
         });
         $scope.results = {
-          totalNumbers: sum
+          pvid: pvid,
+          vlans: vlans
         };
       }
     };

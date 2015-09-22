@@ -20,6 +20,7 @@ angular.module('fluffyBroccoliApp')
           "type": "string",
           "title": "Identifier",
           "description": "A unit/slot/port identifier (e.g. 1/0/1).",
+          "pattern": "^[0-9]+\/[0-9]+\/[0-9]+$"
         },
         "description": {
           "type": "string",
@@ -35,7 +36,7 @@ angular.module('fluffyBroccoliApp')
           "title": "Acceptframe"
         },
         "pvid": {
-          "type": "boolean",
+          "type": "integer",
           "title": "PVID Interface"
         },
         "vlans": {
@@ -45,8 +46,8 @@ angular.module('fluffyBroccoliApp')
             "type": "object",
             "title": "VLAN",
             "properties": {
-              "vlan": {
-                "type": "string"
+              "id": {
+                "type": "integer"
               }
             }
           }

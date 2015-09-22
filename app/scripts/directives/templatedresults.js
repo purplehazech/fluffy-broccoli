@@ -22,8 +22,9 @@ angular.module('fluffyBroccoliApp')
       "vlan participation exclude 1\n" +
       "vlan acceptframe {{ model.acceptframe }}\n" +
       "vlan ingressfilter\n" +
-      //"{{ model.interface.pvid ? 'vlan pvid model.interface.pvid'}}\n" +
       "\n" +
+      "{{ results.pvid }}" +
+      "{{ results.vlans }}" +
       "no shutdown\n" +
       "exit\n" +
       "\n" +
