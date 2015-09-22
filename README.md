@@ -19,11 +19,15 @@ in [the templated-results directive](app/scripts/directives/templatedresults.js)
 
 Run `grunt` for building and `grunt serve` for preview.
 
+Run `docker build -t fluffy-broccoli .`` to create a docker container from `dist/`.
+
 ## Testing
 
 Running `grunt test` will run the unit tests with karma.
 
 ## Deploy
 
-Running ``cf push -b https://github.com/cloudfoundry/staticfile-buildpack.git -p dist/ -m 64M fluffy-broccoli``
-will deploy this on a cloudfoundry instance.
+Running `cf push -b https://github.com/cloudfoundry/staticfile-buildpack.git -p dist/ -m 64M fluffy-broccoli`
+will deploy this to a cloudfoundry instance.
+
+Run `docker run -ti --rm -p 8080:80 fluffy-broccoli` to run dockerized nginx exposing this on port 8080.
