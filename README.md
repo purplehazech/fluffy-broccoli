@@ -12,7 +12,7 @@ to the clipboard.
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.12.1.
 
-The main form for the page can be tweked by editing [the schema service](app/scripts/services/schema.js)
+The main form for the page can be tweaked by editing [the schema service](app/scripts/services/schema.js)
 and [the form config](app/scripts/services/form.js).
 The calculation logic is in [the calculation service](app/scripts/services/calculation.js) with templating
 in [the templated-results directive](app/scripts/directives/templatedresults.js).
