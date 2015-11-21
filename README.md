@@ -1,5 +1,7 @@
 # fluffy-broccoli
 
+![fluffy broccoli logo](app/images/broccoli.jpg)
+
 This project generates a form based on a JSON-Schema definition and then calls a service to act
 upon the contents of the form.
 
@@ -31,3 +33,5 @@ Running `cf push -b https://github.com/cloudfoundry/staticfile-buildpack.git -p 
 will deploy this to a cloudfoundry instance.
 
 Run `docker run -ti --rm -p 8080:80 fluffy-broccoli` to run dockerized nginx exposing this on port 8080.
+
+Or just use rsync to send the files to a static webhost with `rsync -avzr --delete --progress dist/ example.com:/path/to/htdocs`.
